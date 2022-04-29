@@ -94,7 +94,7 @@ add sass as a dev dependency
 npm add -D sass
 ```
 
-let's create a homepage.styles.scss file
+let's create a `homepage.styles.scss` file
 
 ```scss
 .homepage {
@@ -155,4 +155,3 @@ let's create a homepage.styles.scss file
 output
 
 ![](../img/3.png)
-
