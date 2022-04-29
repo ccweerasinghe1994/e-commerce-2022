@@ -5,21 +5,23 @@
 ## let's create a create a new project using vite
 
 ### create project
+
 ```bash
 $ npm create vite@latest
 ```
+
 the default project folder structure is as follows:
 
 ![folder structure](./../img/1.png)
 
-to run the application 
+to run the application
 
-```bash 
+```bash
 $ cd e-commerce
 $ npm run dev
 ```
 
-### clean up the project 
+### clean up the project
 
 clear the `App.css` file
 
@@ -33,7 +35,6 @@ function App() {
 }
 
 export default App;
-
 ```
 
 let's create a `homepage.component.tsx` file
@@ -81,12 +82,14 @@ const HomePage = () => {
 
 export default HomePage;
 ```
+
 output
 
 ![](../img/2.png)
 
 let's add `Sass` to our project
 add sass as a dev dependency
+
 ```bash
 npm add -D sass
 ```
@@ -94,60 +97,62 @@ npm add -D sass
 let's create a homepage.styles.scss file
 
 ```scss
-.homepage{
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.directory-menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.menu-item {
+  min-width: 30%;
+  height: 240px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 0 7.5px 15px;
+  &:first-child {
+    margin-right: 7.5px;
+  }
+  &:last-child {
+    margin-left: 7.5px;
+  }
+
+  .content {
+    height: 90px;
+    padding: 0 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 80px;
-}
-
-.directory-menu{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.menu-item{
-    min-width: 30%;
-    height: 240px;
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
     justify-content: center;
     border: 1px solid black;
-    margin: 0 7.5px 15px;
-    &:first-child{
-        margin-right: 7.5px;
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 22px;
+      color: #4a4a4a;
     }
-    &:last-child{
-        margin-left: 7.5px;
+
+    .subtitle {
+      font-weight: lighter;
+      font-size: 16px;
     }
-
-    .content{
-        height: 90px;
-        padding: 0 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid black;
-
-        .title{
-            font-weight: bold;
-            margin-bottom: 6px;
-            font-size: 22px;
-            color: #4a4a4a;
-        }
-
-        .subtitle{
-            font-weight: lighter;
-            font-size: 16px;
-        }
-
-    }
+  }
 }
 ```
+
 output
 
 ![](../img/3.png)
+
